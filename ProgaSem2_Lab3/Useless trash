@@ -1,0 +1,88 @@
+//Comparing Comparing::operator+(const Comparing &c) {
+//
+//    return Comparing();
+//}
+
+//Comparing::Comparing(int pInt[100]) = default;
+
+// Метод getBytesSize
+// Просто Size отдельная функция
+
+
+//    for (int i = 0; i < sizeof(array1); i++)
+//        std::string to_string ( array1[i] );
+
+//std::cout << array1.size();
+//    if (array1.size() > c.array1.size()) {
+//        std::cout << "True";
+//        return true;
+//    }
+//    else
+//        return false;
+
+//    if (sizeof(this->array1) == sizeof(c.array1)) {
+//            return true;
+//        }
+//        else
+//            return false;
+
+bool Comparing::operator!=(const Comparing &c) {
+    if (sizeof(array1) != sizeof(c.array1))
+        return true;
+    else
+        return false;
+}
+
+Comparing::Comparing(int *pInt) {};
+
+Comparing::Comparing(int *pInt) {};
+
+/////////////////////////////////////////////////////////
+class Comparing {
+public:
+    explicit Comparing(int pInt[100]);
+
+    ~Comparing() = default;
+
+    bool operator==(const Comparing &c);
+
+    bool operator>(const Comparing &c);
+
+    bool operator<(const Comparing &c);
+
+    bool operator!=(const Comparing &c);
+
+private:
+    char const array1;
+};
+////////////////////////////////////////////////////////////////////////////
+
+class Comparing {
+public:
+    explicit Comparing(int pInt[100]);
+
+    ~Comparing() = default;
+
+    bool operator==(const Comparing &c);
+
+    bool operator>(const Comparing &c);
+
+    bool operator<(const Comparing &c);
+
+    bool operator!=(const Comparing &c);
+
+private:
+    char const array1;
+};
+///////////////////////////////////////////////////////////////////////////
+
+int array1[3] = {1, 2, 3};
+    int array2[4] = {9, 8, 7, 6};
+    Comparing Comparing1(array1);
+    Comparing Comparing2(array2);
+    Comparing1.operator == (Comparing2);
+    Comparing1.operator != (Comparing2);
+    Comparing1.operator < (Comparing2);
+    Comparing1.operator > (Comparing2);
+
+/////////////////////////////////////////////////////////////////////////////////////
