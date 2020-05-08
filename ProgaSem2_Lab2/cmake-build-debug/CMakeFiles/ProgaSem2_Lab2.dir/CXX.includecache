@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab2/Class.cpp
+Class.h
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab2/Class.h
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab2/Class.h
+iostream
+-
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab2/main.cpp
+iostream
+-
+Class.h
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab2/Class.h
+
