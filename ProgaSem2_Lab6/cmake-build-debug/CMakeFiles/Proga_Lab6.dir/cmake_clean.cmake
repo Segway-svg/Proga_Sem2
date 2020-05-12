@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Proga_Lab6.dir/Vector.cpp.obj"
   "CMakeFiles/Proga_Lab6.dir/generalgos.cpp.obj"
   "CMakeFiles/Proga_Lab6.dir/main.cpp.obj"
   "Proga_Lab6.exe"

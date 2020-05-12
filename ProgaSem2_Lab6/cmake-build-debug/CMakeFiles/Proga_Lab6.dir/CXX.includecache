@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/Vector.h
+iostream
+-
+cmath
+-
+vector
+-
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/generalgos.cpp
+iterator
+-
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/generalgos.h
+generalgos.cpp
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/generalgos.cpp
+iterator
+-
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/main.cpp
+iostream
+-
+iterator
+-
+vector
+-
+generalgos.h
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/generalgos.h
+Vector.h
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/Vector.h
+

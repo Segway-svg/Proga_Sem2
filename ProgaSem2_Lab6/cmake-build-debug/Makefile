@@ -124,6 +124,33 @@ Proga_Lab6\fast:
 	$(MAKE) -f CMakeFiles\Proga_Lab6.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab6.dir\build
 .PHONY : Proga_Lab6\fast
 
+Vector.obj: Vector.cpp.obj
+
+.PHONY : Vector.obj
+
+# target to build an object file
+Vector.cpp.obj:
+	$(MAKE) -f CMakeFiles\Proga_Lab6.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab6.dir\Vector.cpp.obj
+.PHONY : Vector.cpp.obj
+
+Vector.i: Vector.cpp.i
+
+.PHONY : Vector.i
+
+# target to preprocess a source file
+Vector.cpp.i:
+	$(MAKE) -f CMakeFiles\Proga_Lab6.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab6.dir\Vector.cpp.i
+.PHONY : Vector.cpp.i
+
+Vector.s: Vector.cpp.s
+
+.PHONY : Vector.s
+
+# target to generate assembly for a file
+Vector.cpp.s:
+	$(MAKE) -f CMakeFiles\Proga_Lab6.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab6.dir\Vector.cpp.s
+.PHONY : Vector.cpp.s
+
 generalgos.obj: generalgos.cpp.obj
 
 .PHONY : generalgos.obj
@@ -187,6 +214,9 @@ help:
 	@echo ... Proga_Lab6
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Vector.obj
+	@echo ... Vector.i
+	@echo ... Vector.s
 	@echo ... generalgos.obj
 	@echo ... generalgos.i
 	@echo ... generalgos.s

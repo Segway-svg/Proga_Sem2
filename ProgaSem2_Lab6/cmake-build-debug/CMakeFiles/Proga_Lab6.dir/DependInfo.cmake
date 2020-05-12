@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/Vector.cpp" "C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/cmake-build-debug/CMakeFiles/Proga_Lab6.dir/Vector.cpp.obj"
   "C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/generalgos.cpp" "C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/cmake-build-debug/CMakeFiles/Proga_Lab6.dir/generalgos.cpp.obj"
   "C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/main.cpp" "C:/Users/tukat/CLionProjects/ProgaSem2_Lab6/cmake-build-debug/CMakeFiles/Proga_Lab6.dir/main.cpp.obj"
   )
