@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab7/CircularBuffer.h
+Iterator.h
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab7/Iterator.h
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab7/Iterator.h
+iostream
+-
+algorithm
+-
+iterator
+-
+string
+-
+
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab7/main.cpp
+iostream
+-
+CircularBuffer.h
+C:/Users/tukat/CLionProjects/ProgaSem2_Lab7/CircularBuffer.h
+
