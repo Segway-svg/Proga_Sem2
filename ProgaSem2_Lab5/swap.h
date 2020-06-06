@@ -1,13 +1,8 @@
-#ifndef PROGA_LAB5_SWAP_H
-#define PROGA_LAB5_SWAP_H
-
 #pragma once
 
-template<class T>
-void swap(T &a, T &b) {
-    T temp(a);
-    a = b;
-    b = temp;
+template<class Type>
+void Swap(Type &first, Type &second) {
+    Type tmp = first;
+    first = second;
+    second = tmp;
 }
-
-#endif //PROGA_LAB5_SWAP_H

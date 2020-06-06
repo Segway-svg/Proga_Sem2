@@ -49,10 +49,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tukat\CLionProjects\ProgaSem2_Lab5
+CMAKE_SOURCE_DIR = C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab5
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tukat\CLionProjects\ProgaSem2_Lab5\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab5\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,9 +81,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\ProgaSem2_Lab5\cmake-build-debug\CMakeFiles C:\Users\tukat\CLionProjects\ProgaSem2_Lab5\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab5\cmake-build-debug\CMakeFiles C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab5\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\ProgaSem2_Lab5\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab5\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,6 +124,33 @@ Proga_Lab5\fast:
 	$(MAKE) -f CMakeFiles\Proga_Lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab5.dir\build
 .PHONY : Proga_Lab5\fast
 
+exceptions.obj: exceptions.cpp.obj
+
+.PHONY : exceptions.obj
+
+# target to build an object file
+exceptions.cpp.obj:
+	$(MAKE) -f CMakeFiles\Proga_Lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab5.dir\exceptions.cpp.obj
+.PHONY : exceptions.cpp.obj
+
+exceptions.i: exceptions.cpp.i
+
+.PHONY : exceptions.i
+
+# target to preprocess a source file
+exceptions.cpp.i:
+	$(MAKE) -f CMakeFiles\Proga_Lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab5.dir\exceptions.cpp.i
+.PHONY : exceptions.cpp.i
+
+exceptions.s: exceptions.cpp.s
+
+.PHONY : exceptions.s
+
+# target to generate assembly for a file
+exceptions.cpp.s:
+	$(MAKE) -f CMakeFiles\Proga_Lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Proga_Lab5.dir\exceptions.cpp.s
+.PHONY : exceptions.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -160,6 +187,9 @@ help:
 	@echo ... Proga_Lab5
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... exceptions.obj
+	@echo ... exceptions.i
+	@echo ... exceptions.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

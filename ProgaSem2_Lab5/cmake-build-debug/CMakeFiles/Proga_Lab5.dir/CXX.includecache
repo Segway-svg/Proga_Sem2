@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tukat/CLionProjects/Programming/GitHub/ProgaSem2/ProgaSem2_Lab5/exceptions.cpp
+exceptions.h
+C:/Users/tukat/CLionProjects/Programming/GitHub/ProgaSem2/ProgaSem2_Lab5/exceptions.h
+utility
+-
+
+C:/Users/tukat/CLionProjects/Programming/GitHub/ProgaSem2/ProgaSem2_Lab5/exceptions.h
+iostream
+-
+

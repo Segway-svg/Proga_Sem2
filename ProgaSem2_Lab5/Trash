@@ -1,0 +1,164 @@
+main.cpp
+
+#include <iostream>
+#include "swap.h"
+#include "matrix.h"
+
+template<class T>
+void printMatrix(Matrix<T> &x) {
+    for (int i = 0; i < x.getHeight(); i++) {
+        for (int j = 0; j < x.getWidth(); j++)
+            std::cout << x.get(i, j) << " ";
+        std::cout << std::endl;
+    }
+}
+
+int main() {
+    int a = 3, b = 5;
+    swap<int>(a, b);
+    std::cout << "Swap: ";
+    std::cout << a << " " << b << std::endl << std::endl;
+
+    Matrix<int> x(3, 3);
+
+    x.get(0, 1) = 1;
+    x.get(0, 2) = 2;
+    x.get(1, 0) = 3;
+    x.get(1, 1) = 4;
+
+    printMatrix(x);
+
+    x.resize(2, 2);
+
+    printMatrix(x);
+
+    try {
+        x.get(5, 5);
+    } catch (MatrixException &ex) {
+        std::cout << ex.what();
+    }
+
+}
+
+matrix.h
+
+#ifndef PROGA_LAB5_MATRIX_H
+#define PROGA_LAB5_MATRIX_H
+
+#pragma once
+
+#include "matrix_exceptions.h"
+#include <algorithm>
+#include <ostream>
+
+template<class T>
+class Matrix {
+
+private:
+    T *data;
+    unsigned n, m;
+
+public:
+    Matrix() : n(0), m(0), data(nullptr) {}
+
+    Matrix(unsigned n, unsigned m) : n(n), m(m) {
+        data = new T[n * m];
+    }
+
+    Matrix(const Matrix<T> &other) : n(other.n), m(other.m) {
+        data = new T[n * m];
+        for (int i = 0; i < n * m; i++)
+            data[i] = other.data[i];
+    }
+
+
+    const bool operator==(const Matrix &other) const {
+        if (n != other.n || m != other.m)
+            return false;
+        for (int i = 0; i < n * m; i++)
+            if (data[i] != other.data[i])
+                return false;
+        return true;
+    }
+
+    const bool operator!=(const Matrix &other) const {
+        return !(*this == other);
+    }
+
+    T &get(int i, int j) {
+        if (i >= n || j >= m || i < 0 || j < 0)
+            throw IndexOutOfBoundsException();
+        return data[i * n + j];
+    }
+
+    void set(int i, int j, T value) {
+        if (i >= n || j >= m || i < 0 || j < 0)
+            throw IndexOutOfBoundsException();
+        data[i * n + j] = value;
+    }
+
+    void resize(unsigned newN, unsigned newM) {
+        T *newData = new T[newN * newM];
+        for (int i = 0; i < std::min(n, newN); i++) {
+            for (int j = 0; j < std::min(m, newM); j++)
+                newData[i * newN + j] = data[i * n + j];
+        }
+        delete[] data;
+        data = newData;
+        n = newN;
+        m = newM;
+    }
+
+    unsigned getHeight() {
+        return n;
+    }
+
+    unsigned getWidth() {
+        return m;
+    }
+};
+
+#endif //PROGA_LAB5_MATRIX_H
+
+
+matrix_exceptions.h
+
+#ifndef PROGA_LAB5_MATRIX_EXCEPTIONS_H
+#define PROGA_LAB5_MATRIX_EXCEPTIONS_H
+
+#pragma once
+
+#include <exception>
+
+class MatrixException : public std::exception {
+public:
+    const char *what() const noexcept override {
+        return "Matrix exception\n";
+    }
+};
+
+class IndexOutOfBoundsException : public MatrixException {
+public:
+    const char *what() const noexcept override {
+        return "Index is out of bounds\n";
+    }
+};
+
+#endif //PROGA_LAB5_MATRIX_EXCEPTIONS_H
+
+
+swap.h
+
+#ifndef PROGA_LAB5_SWAP_H
+#define PROGA_LAB5_SWAP_H
+
+#pragma once
+
+template<class T>
+void swap(T &a, T &b) {
+    T temp(a);
+    a = b;
+    b = temp;
+}
+
+#endif //PROGA_LAB5_SWAP_H

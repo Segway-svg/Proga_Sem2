@@ -1,0 +1,80 @@
+main.cpp
+
+std::vector <std::vector <int>> v = { {1, 2}, {3, 4} };
+    Matrix <int> M1(v);
+    Matrix <double> M2(5, 10);
+
+
+
+matrix.cpp
+
+#include "matrix.h"
+#include "matrix_exceptions.h"
+#include <vector>
+
+// class Matrix
+template<class T>
+Matrix<T>::Matrix(int n, int m) {
+    this->data_.assign(n, std::vector<T>(m));
+};
+
+template<class T>
+Matrix<T>::Matrix(std::vector<std::vector<T>> v) {
+    this->data_ = v;
+};
+
+template<class T>
+T Matrix<T>::operator()(T i, T j) {
+    if (i < 0 || i > this->data_.size())
+        throw ExistExeption();
+    if (j < 0 || j > this->data_[i].size())
+        throw ExistExeption();
+    return this->data_[i][j];
+};
+
+template<class T>
+std::vector<T> Matrix<T>::operator()(T i) {
+    if (i < 0 || i > this->data_.size())
+        throw ExistExeption();
+    return this->data_[i];
+};
+
+
+matrix.h
+#pragma once
+
+#include <vector>
+
+template<class T>
+class Matrix {
+public:
+    Matrix(int n, int m);
+
+    explicit Matrix(std::vector<std::vector<T>> v);
+
+    T operator()(T i, T j);
+
+    std::vector<T> operator()(T i);
+
+private:
+    std::vector<std::vector<T>> data_;
+};
+
+
+matrix_exceptions.h
+
+#pragma once
+
+#include <exception>
+
+
+class Exception : public std::exception {
+};
+
+class ExistExeption : public Exception {
+    const char *what() const throw() override {
+        return "Matrix is smaller then index!\n";
+    }
+};
+
+

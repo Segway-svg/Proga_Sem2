@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/tukat/CLionProjects/ProgaSem2_Lab5/main.cpp" "C:/Users/tukat/CLionProjects/ProgaSem2_Lab5/cmake-build-debug/CMakeFiles/Proga_Lab5.dir/main.cpp.obj"
+  "C:/Users/tukat/CLionProjects/Programming/GitHub/ProgaSem2/ProgaSem2_Lab5/exceptions.cpp" "C:/Users/tukat/CLionProjects/Programming/GitHub/ProgaSem2/ProgaSem2_Lab5/cmake-build-debug/CMakeFiles/Proga_Lab5.dir/exceptions.cpp.obj"
+  "C:/Users/tukat/CLionProjects/Programming/GitHub/ProgaSem2/ProgaSem2_Lab5/main.cpp" "C:/Users/tukat/CLionProjects/Programming/GitHub/ProgaSem2/ProgaSem2_Lab5/cmake-build-debug/CMakeFiles/Proga_Lab5.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Proga_Lab5.dir/exceptions.cpp.obj"
   "CMakeFiles/Proga_Lab5.dir/main.cpp.obj"
   "Proga_Lab5.exe"
   "Proga_Lab5.exe.manifest"
