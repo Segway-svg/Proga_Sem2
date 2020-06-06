@@ -1,0 +1,3 @@
+C:/Users/tukat/CLionProjects/Another_Proga_Sem2_Lab4/cmake-build-debug/CMakeFiles/Another_Proga_Sem2_Lab4.dir
+C:/Users/tukat/CLionProjects/Another_Proga_Sem2_Lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tukat/CLionProjects/Another_Proga_Sem2_Lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
