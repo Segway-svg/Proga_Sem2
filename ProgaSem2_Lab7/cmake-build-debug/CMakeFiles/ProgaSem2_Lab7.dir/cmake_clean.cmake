@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ProgaSem2_Lab7.dir/CircularBuffer.cpp.obj"
+  "CMakeFiles/ProgaSem2_Lab7.dir/Iterator.cpp.obj"
   "CMakeFiles/ProgaSem2_Lab7.dir/main.cpp.obj"
   "ProgaSem2_Lab7.exe"
   "ProgaSem2_Lab7.exe.manifest"

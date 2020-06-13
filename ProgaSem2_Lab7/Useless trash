@@ -1,0 +1,15 @@
+    bool operator>=(const Iterator &rhs) const {
+        return !(position < rhs.position);
+//        if (start > end) {
+//            if (position < capacity && rhs.position < capacity) {
+//                return position >= rhs.position;
+//            } else if (position < capacity) {
+//                return false;
+//            } else if (rhs.position < capacity) {
+//                return true;
+//            } else {
+//                return position >= rhs.position;
+//            }
+//        } else
+//            return position >= rhs.position;
+    }

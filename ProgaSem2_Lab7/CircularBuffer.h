@@ -1,5 +1,6 @@
 #ifndef PROGASEM2_LAB7_CIRCULARBUFFER_H
 #define PROGASEM2_LAB7_CIRCULARBUFFER_H
+#pragma once
 
 #include "Iterator.h"
 

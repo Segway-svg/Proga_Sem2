@@ -49,10 +49,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tukat\CLionProjects\ProgaSem2_Lab7
+CMAKE_SOURCE_DIR = C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tukat\CLionProjects\ProgaSem2_Lab7\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab7\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,9 +81,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\ProgaSem2_Lab7\cmake-build-debug\CMakeFiles C:\Users\tukat\CLionProjects\ProgaSem2_Lab7\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab7\cmake-build-debug\CMakeFiles C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab7\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\ProgaSem2_Lab7\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tukat\CLionProjects\Programming\GitHub\ProgaSem2\ProgaSem2_Lab7\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,6 +124,60 @@ ProgaSem2_Lab7\fast:
 	$(MAKE) -f CMakeFiles\ProgaSem2_Lab7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ProgaSem2_Lab7.dir\build
 .PHONY : ProgaSem2_Lab7\fast
 
+CircularBuffer.obj: CircularBuffer.cpp.obj
+
+.PHONY : CircularBuffer.obj
+
+# target to build an object file
+CircularBuffer.cpp.obj:
+	$(MAKE) -f CMakeFiles\ProgaSem2_Lab7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ProgaSem2_Lab7.dir\CircularBuffer.cpp.obj
+.PHONY : CircularBuffer.cpp.obj
+
+CircularBuffer.i: CircularBuffer.cpp.i
+
+.PHONY : CircularBuffer.i
+
+# target to preprocess a source file
+CircularBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles\ProgaSem2_Lab7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ProgaSem2_Lab7.dir\CircularBuffer.cpp.i
+.PHONY : CircularBuffer.cpp.i
+
+CircularBuffer.s: CircularBuffer.cpp.s
+
+.PHONY : CircularBuffer.s
+
+# target to generate assembly for a file
+CircularBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles\ProgaSem2_Lab7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ProgaSem2_Lab7.dir\CircularBuffer.cpp.s
+.PHONY : CircularBuffer.cpp.s
+
+Iterator.obj: Iterator.cpp.obj
+
+.PHONY : Iterator.obj
+
+# target to build an object file
+Iterator.cpp.obj:
+	$(MAKE) -f CMakeFiles\ProgaSem2_Lab7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ProgaSem2_Lab7.dir\Iterator.cpp.obj
+.PHONY : Iterator.cpp.obj
+
+Iterator.i: Iterator.cpp.i
+
+.PHONY : Iterator.i
+
+# target to preprocess a source file
+Iterator.cpp.i:
+	$(MAKE) -f CMakeFiles\ProgaSem2_Lab7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ProgaSem2_Lab7.dir\Iterator.cpp.i
+.PHONY : Iterator.cpp.i
+
+Iterator.s: Iterator.cpp.s
+
+.PHONY : Iterator.s
+
+# target to generate assembly for a file
+Iterator.cpp.s:
+	$(MAKE) -f CMakeFiles\ProgaSem2_Lab7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ProgaSem2_Lab7.dir\Iterator.cpp.s
+.PHONY : Iterator.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -160,6 +214,12 @@ help:
 	@echo ... edit_cache
 	@echo ... ProgaSem2_Lab7
 	@echo ... rebuild_cache
+	@echo ... CircularBuffer.obj
+	@echo ... CircularBuffer.i
+	@echo ... CircularBuffer.s
+	@echo ... Iterator.obj
+	@echo ... Iterator.i
+	@echo ... Iterator.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

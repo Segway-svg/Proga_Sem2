@@ -19,78 +19,7 @@ public:
         position = _position;
     }
 
-    bool operator!=(Iterator const &_other_iterator) const {
-        return this->position % capacity != _other_iterator.position % capacity;
-    }
-
-    bool operator==(Iterator const &_other_iterator) const {
-        return this->position % capacity == _other_iterator.position % capacity;
-    }
-
-    bool operator>(const Iterator &rhs) const {
-        if (start > end) {
-            if (position < capacity && rhs.position < capacity) {
-                return position > rhs.position;
-            } else if (position < capacity) {
-                return false;
-            } else if (rhs.position < capacity) {
-                return true;
-            } else {
-                return position > rhs.position;
-            }
-        } else {
-            return position > rhs.position;
-        }
-    }
-
-    bool operator<(const Iterator &rhs) const {
-        if (start > end) {
-            if (position < capacity && rhs.position < capacity) {
-                return position < rhs.position;
-            } else if (position < capacity) {
-                return true;
-            } else if (rhs.position < capacity) {
-                return false;
-            } else {
-                return position < rhs.position;
-            }
-        } else {
-            return position < rhs.position;
-        }
-    }
-
-    bool operator>=(const Iterator &rhs) const {
-        if (start > end) {
-            if (position < capacity && rhs.position < capacity) {
-                return position >= rhs.position;
-            } else if (position < capacity) {
-                return false;
-            } else if (rhs.position < capacity) {
-                return true;
-            } else {
-                return position >= rhs.position;
-            }
-        } else
-            return position >= rhs.position;
-    }
-
-    bool operator<=(const Iterator &rhs) const {
-        if (start > end) {
-            if (position < capacity && rhs.position < capacity) {
-                return position <= rhs.position;
-            } else if (position < capacity) {
-                return true;
-            } else if (rhs.position < capacity) {
-                return false;
-            } else {
-                return position <= rhs.position;
-            }
-        } else {
-            return position <= rhs.position;
-        }
-    }
-
-    difference_type operator-(const Iterator &it) const {
+            difference_type operator-(const Iterator &it) const {
         Iterator iterator = *this;
         iterator.position -= it.position;
         return *iterator;
@@ -138,6 +67,58 @@ public:
 
     typename Iterator::reference operator*() const {
         return data[position % capacity];
+    }
+
+    bool operator==(const Iterator &rhs) const {
+        return static_cast<const std::iterator<std::random_access_iterator_tag, T> &>(*this) ==
+               static_cast<const std::iterator<std::random_access_iterator_tag, T> &>(rhs) &&
+               data == rhs.data &&
+               position == rhs.position &&
+               start == rhs.start &&
+               end == rhs.end &&
+               capacity == rhs.capacity;
+    }
+
+    bool operator!=(const Iterator &rhs) const {
+        return !(rhs == *this);
+    }
+
+    bool operator<(const Iterator &rhs) const {
+        if (static_cast<const std::iterator<std::random_access_iterator_tag, T> &>(*this) <
+            static_cast<const std::iterator<std::random_access_iterator_tag, T> &>(rhs))
+            return true;
+        if (static_cast<const std::iterator<std::random_access_iterator_tag, T> &>(rhs) <
+            static_cast<const std::iterator<std::random_access_iterator_tag, T> &>(*this))
+            return false;
+        if (data < rhs.data)
+            return true;
+        if (rhs.data < data)
+            return false;
+        if (position < rhs.position)
+            return true;
+        if (rhs.position < position)
+            return false;
+        if (start < rhs.start)
+            return true;
+        if (rhs.start < start)
+            return false;
+        if (end < rhs.end)
+            return true;
+        if (rhs.end < end)
+            return false;
+        return capacity < rhs.capacity;
+    }
+
+    bool operator>(const Iterator &rhs) const {
+        return rhs < *this;
+    }
+
+    bool operator<=(const Iterator &rhs) const {
+        return !(rhs < *this);
+    }
+
+    bool operator>=(const Iterator &rhs) const {
+        return !(*this < rhs);
     }
 
 private:
